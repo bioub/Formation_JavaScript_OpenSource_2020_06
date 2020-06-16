@@ -1,9 +1,5 @@
 const readline = require('readline');
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
 
 function jouer() {
   console.log('Vous avez saisi : ' + essais.join(' - '));
@@ -32,6 +28,10 @@ function jouer() {
   });
 }
 
+
+const rl = readline.createInterface({
+  input: process.stdin,
+});
 const entierAlea = Math.floor(Math.random() * 101);
 const essais = [];
 jouer();
