@@ -1,7 +1,7 @@
-const prenoms = ['Romain', 'Sylvain', 'Jeremy'];
+const prenoms = ["Romain", "Sylvain", "Jeremy"];
 
 function hello(name) {
-  return `Hello ${name}`;
+  return `Hello ${name.toUpperCase()}`;
 }
 
 for (const prenom of prenoms) {
