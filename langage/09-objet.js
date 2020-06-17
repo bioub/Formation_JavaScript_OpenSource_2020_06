@@ -8,7 +8,7 @@ const coords = {
 console.log(coords.x); // 1
 console.log(coords.y); // 2
 
-// ajouter des clés
+// ajouter des clés (extensibilité)
 coords.z = 3;
 
 // modifier
@@ -17,6 +17,18 @@ coords.z = 4;
 // supprimer
 delete coords.z;
 
+// on peut aussi utiliser des []
+const key = 'z'
+console.log(coords['x']); // 1
+console.log(coords['y']); // 2
+console.log(coords[z]); // 3
+
+for (const key in coords) {
+  if (coords.hasOwnProperty(key)) {
+    const value = coords[key];
+    console.log(key, value);
+  }
+}
 
 // simuler des classes (fonction constructeur)
 // function Contact(prenom) {
@@ -47,3 +59,9 @@ const romain = new Contact('Romain');
 console.log(romain.prenom);
 
 romain.hello();
+
+console.log(romain.hasOwnProperty('prenom')); // true
+console.log(romain.hasOwnProperty('hello')); // false
+
+console.log(romain.prenom !== undefined); // true
+console.log(romain.hello !== undefined); // true

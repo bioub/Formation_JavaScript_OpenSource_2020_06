@@ -1,7 +1,7 @@
 const prenoms = ["Romain", "Sylvain", "Jeremy"];
 
-function hello(name = '') {
-  console.log(`Hello ${name}`);
+function hello(name = '', i, array) {
+  console.log(`Hello ${name} ${i} ${array}`);
 }
 
 prenoms
