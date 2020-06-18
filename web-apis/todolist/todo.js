@@ -27,6 +27,11 @@ export function addTodo(todo, containerEl) {
   // Indice : remove (pensez au polyfill) ou removeChild -> MDN
     // le addEventListener est ici
 
+    const buttonEl = document.createElement("button");
+    buttonEl.innerText = '-';
+    buttonEl.classList.add('remove');
+    rowEl.appendChild(buttonEl);
+
   //   containerEl.prepend(rowEl); // pensez au polyfill
   prepend(rowEl, containerEl);
 }
