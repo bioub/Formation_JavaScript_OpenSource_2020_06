@@ -7,7 +7,10 @@ class Clock extends Component {
       format: 'HH:mm:ss',
       now: new Date(),
     };
-    setInterval(() => {
+  }
+  componentDidMount() {
+    // juste après que le composant apparaissent dans le DOM
+    this._interval = setInterval(() => {
       // on ne modifie pas le state directement
       // this.state.now = new Date();
       // setState fusionne le state avec le précédent
@@ -15,6 +18,9 @@ class Clock extends Component {
         now: new Date(),
       });
     }, 1000);
+  }
+  componentWillUnmount() {
+    clearInterval(this._interval);
   }
   render() {
     return <div className="Clock">{this.state.now.toLocaleTimeString()}</div>;
