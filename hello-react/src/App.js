@@ -11,16 +11,20 @@ class App extends Component {
     this.state = {
       show: true,
       prenom: 'Toto',
+      // todos: []
     };
   }
   render() {
     return (
       <div className="App">
         <Hello name={this.state.prenom} />
+        <Hello name="Romain" />
+        <Hello name="Test" />
         <button onClick={() => this.setState({ show: !this.state.show })}>
           {!this.state.show ? "On" : "Off"}
         </button>
         {this.state.show && <Clock />}
+        <Counter />
         <Counter />
         <List items={["Rouge", "Vert", "Bleu"]} />
         <Form prenom={this.state.prenom} onNewPrenom={(text) => this.setState({prenom: text})} />

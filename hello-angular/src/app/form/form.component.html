@@ -1,0 +1,24 @@
+<form (submit)="handleSubmit($event)">
+    <div>
+      <label>Prénom</label>
+      <input
+        type="text"
+        name="prenom"
+        [value]="contact.prenom"
+        (input)="contact.prenom = $event.target.value"
+      />
+    </div>
+    <div>
+      <label>Nom</label>
+      <input
+        type="text"
+        name="nom"
+        [value]="contact.nom"
+        (input)="contact.nom = $event.target.value"
+      />
+    </div>
+    <p>Vous avez saisi : {{contact.prenom}} {{contact.nom}} </p>
+    <div>
+      <button>Go</button>
+    </div>
+  </form>

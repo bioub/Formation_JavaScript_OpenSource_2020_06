@@ -17,8 +17,8 @@ class Counter extends Component {
       <div className="Counter">
         <button
           className="Counter"
-          onClick={(event) => {
-            console.log(event.target.className);
+          onClick={($event) => {
+            console.log($event.target.className);
             this.handleClick();
           }}
         >

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import style from './Clock.module.css';
 
 class Clock extends Component {
   constructor() {
@@ -20,10 +21,10 @@ class Clock extends Component {
     }, 1000);
   }
   componentWillUnmount() {
-    clearInterval(this._interval);
+    // clearInterval(this._interval);
   }
   render() {
-    return <div className="Clock">{this.state.now.toLocaleTimeString()}</div>;
+    return <div className={style.Host}>{this.state.now.toLocaleTimeString()}</div>;
   }
 }
 
