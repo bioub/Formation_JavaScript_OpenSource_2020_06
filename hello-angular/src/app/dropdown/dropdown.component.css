@@ -1,0 +1,33 @@
+.selected {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 3px;
+    padding: 3px;
+    display: flex;
+    cursor: pointer;
+}
+
+.selected::after {
+    content: '↓';
+    margin-left: auto;
+}
+
+.menu {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.item {
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.item:hover {
+    background-color: lightgoldenrodyellow;
+}
+
+.item.active {
+    background-color: lightskyblue;
+}

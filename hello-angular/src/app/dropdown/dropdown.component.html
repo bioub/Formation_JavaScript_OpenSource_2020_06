@@ -1,0 +1,24 @@
+<div class="selected" (click)="show = !show">
+  {{ selected }}
+</div>
+<div class="menu" *ngIf="show">
+  <div
+    class="item"
+    *ngFor="let it of items"
+    [ngClass]="{ active: selected === it }"
+    (click)="handleSelect(it)"
+  >
+  <!--
+      for (let it of items) {
+        if (selected === it) {
+            divEl.classList.add('active');
+        }
+        divEl.addEventListener('click', ($event) => {
+          handleSelect(it);
+          divEl.dispatchEvent(it);
+        });
+      }
+    -->
+    {{ it }}
+  </div>
+</div>

@@ -2,3 +2,16 @@
 <app-clock></app-clock>
 <app-counter></app-counter>
 <app-form></app-form>
+
+<app-dropdown
+  [items]="['Rouge', 'Vert', 'Bleu']"
+  selected="Vert"
+  (selectedChange)="title = $event"
+></app-dropdown>
+
+{{ title }}
+
+<div class="title"></div>
+<div class="{{ title }}"></div>
+<!-- Mauvaise pratique -->
+<div [className]="title"></div>
